@@ -27,6 +27,7 @@ const CategoriesTable = () => {
             }
         }
         getAllBrands();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentAccount]);
 
     const columns = [
