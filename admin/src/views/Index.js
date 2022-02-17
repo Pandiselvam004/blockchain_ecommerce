@@ -37,18 +37,6 @@ const Index = (props) => {
   const [activeNav, setActiveNav] = useState(1);
   const [chartExample1Data, setChartExample1Data] = useState("data1");
 
-  useEffect(() => {
-    const getNewUsers = async () => {
-      try {
-        const res = await axios.get("/users/stats");
-        SetNewUsers(res.data);
-      } catch (error) {
-        console.log(error);
-      }
-    }
-    getNewUsers();
-  }, [])
-
   if (window.Chart) {
     parseOptions(Chart, chartOptions());
   }
