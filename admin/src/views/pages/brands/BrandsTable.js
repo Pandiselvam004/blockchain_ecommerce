@@ -17,16 +17,16 @@ const BrandsTable = () => {
     const [brands, setBrands] = useState([]);
     const { getBrands, currentAccount } = useContext(EcommerceContext);
 
-    const getAllBrands = async () => {
-        try {
-            const allBrands = await getBrands();
-            setBrands(allBrands);
-        } catch (err) {
-            makeToast('error', err);
-        }
-    }
-
     useEffect(() => {
+        const getAllBrands = async () => {
+            try {
+                const allBrands = await getBrands();
+                setBrands(allBrands);
+            } catch (err) {
+                makeToast('error', err);
+            }
+        }
+
         getAllBrands();
     }, [currentAccount]);
 

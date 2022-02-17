@@ -1,4 +1,4 @@
-import React, { useContext, useEffect, useState } from 'react'
+import React, { useContext} from 'react'
 import {
     Button,
     Card,
@@ -15,7 +15,7 @@ import {
 import { Formik } from 'formik';
 import UserHeader from "components/Headers/UserHeader.js";
 import { EcommerceContext } from "context/Ecommerce";
-import { useHistory, useParams } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 import * as Yup from 'yup';
 import makeToast from 'helpers/makeToast';
 

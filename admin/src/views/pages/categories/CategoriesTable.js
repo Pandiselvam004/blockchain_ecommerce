@@ -17,16 +17,15 @@ const CategoriesTable = () => {
     const [categories, setCategories] = useState([]);
     const { getCategories, currentAccount } = useContext(EcommerceContext);
 
-    const getAllBrands = async () => {
-        try {
-            const allCategories = await getCategories();
-            setCategories(allCategories);
-        } catch (err) {
-            makeToast('error', err);
-        }
-    }
-
     useEffect(() => {
+        const getAllBrands = async () => {
+            try {
+                const allCategories = await getCategories();
+                setCategories(allCategories);
+            } catch (err) {
+                makeToast('error', err);
+            }
+        }
         getAllBrands();
     }, [currentAccount]);
 

@@ -5,7 +5,7 @@ import classnames from "classnames";
 // javascipt plugin for creating charts
 import Chart from "chart.js";
 // react plugin used to create charts
-import { Line, Bar } from "react-chartjs-2";
+import { Line } from "react-chartjs-2";
 // reactstrap components
 import {
   Button,
@@ -36,7 +36,6 @@ import axios from "axios";
 const Index = (props) => {
   const [activeNav, setActiveNav] = useState(1);
   const [chartExample1Data, setChartExample1Data] = useState("data1");
-  const [newUsers, SetNewUsers] = useState([]);
 
   useEffect(() => {
     const getNewUsers = async () => {

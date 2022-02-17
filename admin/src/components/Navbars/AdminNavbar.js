@@ -13,7 +13,7 @@ import {
 import { AuthContext } from "context/authContext/authContext";
 import { logOut } from "context/authContext/apiCalls";
 import { EcommerceContext } from "context/Ecommerce";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 
 const AdminNavbar = (props) => {
   const { user, dispatch } = useContext(AuthContext);
