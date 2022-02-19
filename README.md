@@ -7,7 +7,7 @@
 * npm i
 * create .env by copying env.example
 * Create Mongo Database  and import below data into your db
-* [https://res.cloudinary.com/pandi-cnq-upload/raw/upload/v1645278106/users_xffoqn.json](User Data for Mongo DB)
+* [User Data for Mongo DB] (https://res.cloudinary.com/pandi-cnq-upload/raw/upload/v1645278106/users_xffoqn.json)
 * Update MONGO_URL of your localhost (for example : mongodb://localhost:27017/ecommerce)
 * npm run start
 
@@ -15,14 +15,13 @@
 
 
 * Install Metamask in your chrome browser and fetch test ETH coins for testing and deployment process using below url
-[https://faucet.egorfine.com/](Test Faucet for Ropsten)
-
+[Test Faucet for Ropsten] (https://faucet.egorfine.com/)
 
 * cd smart_contracts/
 * npm i
 * create .env by copying env.example
 * Create your own development Ropsten URL in infura like below screen record 
-* [https://vimeo.com/user167282801/review/679483610/5532de6a02](Infura Create Ropsten Test URL)
+* [Infura Create Ropsten Test URL] (https://vimeo.com/user167282801/review/679483610/5532de6a02)
 * copy the ropsten API url update it in .env **(ROPSTEN_URL)** - to deploy the smart contract
 * Paste your private key of your wallet of metamask in .env **(PRIVATE_KEY)** - to deploy the smart contract
 * sudo npx hardhat compile 
