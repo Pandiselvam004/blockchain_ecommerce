@@ -34,7 +34,7 @@ const BrandsTable = () => {
     const columns = [
         {
             name: 'Name',
-            selector: row => row.name,
+            cell: row => <div class="text-capitalize">{row.name}</div>,
             sortable: true,
         }, {
             name: 'Created At',

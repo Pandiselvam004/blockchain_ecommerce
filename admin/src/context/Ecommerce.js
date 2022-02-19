@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { ethers } from "ethers";
 import { contractABI, contractAddress } from "../utils/consts";
 import makeToast from 'helpers/makeToast';
@@ -67,7 +67,8 @@ export const EcommerceProvider = ({ children }) => {
             console.log(categoryBlock);
             return categoryBlock;
         } catch (error) {
-            throw error.message;
+            let err =  Object("Already Exists or Internal Server Error");
+            throw err;
         }
     };
 
@@ -90,20 +91,17 @@ export const EcommerceProvider = ({ children }) => {
             const ecommerceContract = EcommerceContract();
             const brandBlock = await ecommerceContract.addBrand(name);
             await brandBlock.wait();
-            console.log(brandBlock);
             return brandBlock;
         } catch (error) {
-            throw error.message;
+            let err =  Object("Already Exists or Internal Server Error");
+            throw err;
         }
     };
 
-    useEffect(() => {
-        checkIfWalletIsConnect();
-    }, []);
     return (
         <EcommerceContext.Provider
             value={{
-                addBrand, currentAccount, getBrands, connectWallet, getCategories, addCategory
+                addBrand, checkIfWalletIsConnect, currentAccount, getBrands, connectWallet, getCategories, addCategory
             }}
         >
             {children}

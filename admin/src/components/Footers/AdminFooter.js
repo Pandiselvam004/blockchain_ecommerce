@@ -16,7 +16,7 @@ const Footer = () => {
               rel="noopener noreferrer"
               target="_blank"
             >
-              Uber Admin Panel
+              Ecommerce Admin Panel
             </a>
           </div>
         </Col>

@@ -9,6 +9,7 @@ import Sidebar from "components/Sidebar/Sidebar.js";
 
 import routes from "routes.js";
 import { AuthContext } from "context/authContext/authContext";
+import { EcommerceContext } from "context/Ecommerce";
 import logo from "assets/logo.png";
 
 
@@ -16,12 +17,15 @@ const Admin = (props) => {
   const mainContent = React.useRef(null);
   const location = useLocation();
   const { user } = useContext(AuthContext);
+  const { checkIfWalletIsConnect } = useContext(EcommerceContext);
 
 
   React.useEffect(() => {
     document.documentElement.scrollTop = 0;
     document.scrollingElement.scrollTop = 0;
     mainContent.current.scrollTop = 0;
+    checkIfWalletIsConnect();
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [location]);
 
   const getRoutes = (routes) => {

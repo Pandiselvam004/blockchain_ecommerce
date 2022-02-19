@@ -5,7 +5,7 @@ export const login = async (user, dispatch) => {
     dispatch(loginStart());
 
     try {
-        const res = await axios.post("https://floating-sands-63825.herokuapp.com/api/auth/login", user);
+        const res = await axios.post("/auth/login", user);
         res.data.isAdmin && dispatch(loginSuccess(res.data));
         if (!res.data.isAdmin) {
             dispatch(loginFailure({ response: { data: "Admin Only can access" } }));

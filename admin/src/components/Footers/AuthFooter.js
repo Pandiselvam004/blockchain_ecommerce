@@ -18,7 +18,7 @@ const Login = () => {
                   href="https://www.creative-tim.com?ref=adr-auth-footer"
                   target="_blank"
                 >
-                  Uber Admin
+                  Ecommerce Admin
                 </a>
               </div>
             </Col>

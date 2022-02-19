@@ -18,7 +18,7 @@ const CategoriesTable = () => {
     const { getCategories, currentAccount } = useContext(EcommerceContext);
 
     useEffect(() => {
-        const getAllBrands = async () => {
+        const getAllCategories = async () => {
             try {
                 const allCategories = await getCategories();
                 setCategories(allCategories);
@@ -26,7 +26,7 @@ const CategoriesTable = () => {
                 makeToast('error', err);
             }
         }
-        getAllBrands();
+        getAllCategories();
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [currentAccount]);
 

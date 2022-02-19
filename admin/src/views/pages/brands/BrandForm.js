@@ -61,9 +61,9 @@ const BrandForm = () => {
                                         values,
                                         errors,
                                         touched,
-                                        handleChange,
                                         handleBlur,
                                         handleSubmit,
+                                        setFieldValue,
                                         isSubmitting,
                                     }) => (
                                         < Form onSubmit={handleSubmit}>
@@ -83,7 +83,9 @@ const BrandForm = () => {
                                                                 placeholder="Name"
                                                                 name="name"
                                                                 type="text"
-                                                                onChange={handleChange}
+                                                                onChange={(event) => {
+                                                                    setFieldValue("name", (event.target.value).toLowerCase);
+                                                                }}
                                                                 onBlur={handleBlur}
                                                                 value={values.name}
                                                             />

@@ -61,7 +61,7 @@ const CategoryForm = () => {
                                         values,
                                         errors,
                                         touched,
-                                        handleChange,
+                                        setFieldValue,
                                         handleBlur,
                                         handleSubmit,
                                         isSubmitting,
@@ -83,7 +83,9 @@ const CategoryForm = () => {
                                                                 placeholder="Name"
                                                                 name="name"
                                                                 type="text"
-                                                                onChange={handleChange}
+                                                                onChange={(event) => {
+                                                                    setFieldValue("name", (event.target.value).toLowerCase);
+                                                                }}
                                                                 onBlur={handleBlur}
                                                                 value={values.name}
                                                             />

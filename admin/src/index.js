@@ -12,14 +12,6 @@ import { AuthContextProvider } from "context/authContext/authContext";
 import { EcommerceProvider } from 'context/Ecommerce';
 import axios from 'axios';
 
-axios.create({
-  baseURL: `https://uber-clone-ps.herokuapp.com/api/`,
-  timeout: 30000,
-  headers: {
-    'Content-Type': 'application/json',
-  },
-});
-
 axios.interceptors.request.use(async (conf) => {
   const user = JSON.parse(localStorage.getItem('user')) || null;
   if (user) {
