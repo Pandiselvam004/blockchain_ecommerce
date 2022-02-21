@@ -14,7 +14,7 @@
 ## Smart Contracts Setup
 
 
-* Install Metamask in your chrome browser and fetch test ETH coins for testing and deployment process using below url
+* Install Metamask in your chrome browser and fetch test ETH coins for testing for deployment process and adding new blocks in blockchain network
 [Test Faucet for Ropsten] (https://faucet.egorfine.com/)
 
 * cd smart_contracts/
@@ -33,7 +33,7 @@
 * cd admin/
 * npm i
 * Paste the copied smart contract deployed address and paste it in admin/src/utils/consts.js -- **(contractAddress)**
-* Paste the ABI of smart contract from smart_contracts/artifacts/contracts/Ecommerce.sol/Ecommerce.json
+* Paste the ABI of smart contract from smart_contracts/artifacts/contracts/Ecommerce.sol/Ecommerce.json to admin/src/utils/Ecommerce.json
 * npm run start
 
 Connect your Ropsten Testnet Wallet using metamask 
